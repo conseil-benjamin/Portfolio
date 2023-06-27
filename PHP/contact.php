@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Contact</title>
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="/CSS/contact.css">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
 </head>
 

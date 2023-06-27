@@ -1,0 +1,151 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  color: white;
+  padding: 0;
+  margin: 0;
+  --colorWhite: #ffffff;
+  --colorJet: #2d2e2e;
+  --colorGray: #716969;
+  --colorBlackNight: #0f0f0f;
+  --colorQuartz: #bcabae;
+}
+
+body > nav {
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  width: 100%;
+  background-color: var(--colorJet);
+  display: flex;
+  justify-content: center;
+  padding: 1vw;
+  height: 7vh;
+  align-items: center;
+  font-size: clamp(22px, 4vw, 22px);
+}
+
+body > nav > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+body > nav > ul > li {
+  color: var(--colorBlackNight);
+  padding-right: 50px;
+}
+
+body > nav > ul > li a::after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+body > nav > ul > li a:hover::after {
+  width: 100%;
+  background: var(--colorWhite);
+}
+
+.FirstPage {
+  background-image: url(/image/dev.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: var(--colorWhite);
+  height: 90vh;
+  padding-top: 20vh;
+}
+
+.FirstPage > h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FirstPage > button {
+  background-color: red;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: green;
+}
+
+.wave1 {
+  aspect-ratio: 930/360;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/image/layered-waves-haikei.svg);
+}
+
+.SecondPage {
+  background-color: blueviolet;
+  height: 100vh;
+}
+
+.ThirdPage {
+  background-color: aqua;
+  height: 100vh;
+}
+
+.FourPage {
+  background-color: yellow;
+  height: 100vh;
+}
+
+.FivePage {
+  background-color: blue;
+  height: 100vh;
+}
+
+footer {
+  height: 30vh;
+  background-color: var(--colorJet);
+  color: var(--colorWhite);
+  font-family: "Poppins", sans-serif;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer > p {
+  padding: 2vw;
+}
+
+.imageSocial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid white;
+  margin: 0.5em 0 -0.5em;
+  padding: 0;
+  width: 100%;
+}
