@@ -13,7 +13,8 @@
        <p type="Nom :"><input type="name" name="email" placeholder="Ecriver votre nom ici..." required></input></p>
        <p type="Email :"><input name="email" placeholder="Pour pouvoir vous recontacter.." required></input></p>
        <p type="Message :"><input type="message" name="message" placeholder="Que voudriez-vous me dire.." required></input></p>
-       <button>Envoyer</button>
+       <button class="buttonEnv">Envoyer</button>
+       <button class="buttonRet" onclick="history.back()" id="go-back">Retour</button>
     </form>
     <?php
     if (isset($_POST['message'])) {

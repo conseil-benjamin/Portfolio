@@ -42,7 +42,7 @@ body > nav > ul > li a::after {
   height: 1px;
   width: 0;
   background: transparent;
-  transition: width 0.5s ease, background-color 0.5s ease;
+  transition: width 1s ease, background-color 1s ease;
 }
 
 body > nav > ul > li a:hover::after {
@@ -60,30 +60,99 @@ body > nav > ul > li a:hover::after {
   color: var(--colorWhite);
   height: 90vh;
   padding-top: 20vh;
-}
-
-.FirstPage > h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-.FirstPage > button {
-  background-color: red;
-  border-radius: 10px;
-  border: 4px double #cccccc;
+.FirstPage > h1{
+  overflow: hidden;
+  position: relative;
+  color: var(--colorWhite);
+  padding-bottom: 1em;
+}
+
+.FirstPage > h2 {
+  overflow: hidden;
+  position: relative;
+  color: var(--colorWhite);
+  padding-bottom: 1em;
+}
+
+h2::after {
+  content: "";
+  display: inline-block;
+  animation: animation 10s steps(8) infinite;
+  width: 0ch;
+  color: var(--colorJet);
+}
+
+h2::before {
+  display: inline-block;
+  content: "";
+  width: 3px;
+  height: 50%;
+  background-color: var(--colorWhite);
+  position: absolute;
+  right: 0;
+  animation: blinking 0.4s linear alternate infinite;
+}
+
+@keyframes animation {
+  3% {
+    width: 0ch;
+  }
+  12% {
+    content: "mobile";
+    width: 7ch;
+  }
+  26% {
+    width: 0ch;
+  }
+  40% {
+    content: "web";
+    width: 4ch;
+  }
+  55% {
+    width: 0ch;
+  }
+  70% {
+    content: "logiciel";
+    width: 7ch;
+  }
+  85%{
+    width: 0ch;
+  }
+}
+
+@keyframes blinking {
+  100% {
+    opacity: 0;
+  }
+}
+
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colorQuartz);
+  border-radius: 50px;
   color: #eeeeee;
   text-align: center;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
-  transition: all 0.5s;
+  transition: all 0.8s;
   cursor: pointer;
   margin: 5px;
+  padding: 0.5em;
 }
 
 button:hover {
-  background-color: green;
+  background-color: var(--colorWhite);
+  color: var(--colorBlackNight);
 }
 
 .wave1 {

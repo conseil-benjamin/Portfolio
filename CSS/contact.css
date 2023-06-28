@@ -50,16 +50,27 @@ body{
      color:#5a5a5a
  }
  
- button{
-     float:right;
-     padding:8px 12px;
-     margin:8px 0 0;
-     font-family:'Montserrat',sans-serif;
-     border:2px solid #78788c;
-     background:0;
-     color:#5a5a6e;
-     cursor:pointer;
-     transition:all .3s
+ .buttonEnv{
+     float: right;
+     padding: 8px 12px;
+     margin: 8px 0 0;
+     font-family: 'Montserrat',sans-serif;
+     border: 2px solid #78788c;
+     background: 0;
+     color: #5a5a6e;
+     cursor: pointer;
+     transition: all .3s
+ }
+
+ .buttonRet{
+    float: left;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Montserrat',sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
  }
  
  button:hover{
