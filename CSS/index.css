@@ -1,4 +1,5 @@
 * {
+  font-family: "Poppins", sans-serif;
   list-style: none;
   text-decoration: none;
   scroll-behavior: smooth;
@@ -12,8 +13,11 @@
   --colorQuartz: #bcabae;
 }
 
+::selection{
+  background-color: red;
+}
+
 body > nav {
-  font-family: "Poppins", sans-serif;
   position: fixed;
   width: 100%;
   background-color: var(--colorJet);
@@ -22,7 +26,8 @@ body > nav {
   padding: 1vw;
   height: 7vh;
   align-items: center;
-  font-size: clamp(22px, 4vw, 22px);
+  font-size: clamp(15px, 4vw, 22px);
+  z-index: 1;
 }
 
 body > nav > ul {
@@ -51,12 +56,12 @@ body > nav > ul > li a:hover::after {
 }
 
 .FirstPage {
-  background-image: url(/image/dev.jpg);
-  background-repeat: no-repeat;
+  background-color: var(--colorQuartz);
+  /* background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; */
   color: var(--colorWhite);
   height: 90vh;
   padding-top: 20vh;
@@ -64,19 +69,30 @@ body > nav > ul > li a:hover::after {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 6.5em;
+}
+
+.benjaminImg{
+  padding-bottom: 3em;
+  border-radius: 50%;
 }
 
 .FirstPage > h1{
+  font-size: clamp(15px, 4vw, 22px);
+  background-color: #ffffff05;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(25px);
   overflow: hidden;
   position: relative;
-  color: var(--colorWhite);
+  color: var(--colorBlackNight);
   padding-bottom: 1em;
 }
 
 .FirstPage > h2 {
+  font-size: clamp(15px, 4vw, 22px);
   overflow: hidden;
   position: relative;
-  color: var(--colorWhite);
+  color: var(--colorBlackNight);
   padding-bottom: 1em;
 }
 
@@ -85,7 +101,7 @@ h2::after {
   display: inline-block;
   animation: animation 10s steps(8) infinite;
   width: 0ch;
-  color: var(--colorJet);
+  color: var(--colorWhite);
 }
 
 h2::before {
@@ -96,7 +112,6 @@ h2::before {
   background-color: var(--colorWhite);
   position: absolute;
   right: 0;
-  animation: blinking 0.4s linear alternate infinite;
 }
 
 @keyframes animation {
@@ -148,6 +163,7 @@ button {
   cursor: pointer;
   margin: 5px;
   padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 button:hover {
@@ -156,6 +172,7 @@ button:hover {
 }
 
 .wave1 {
+  padding-top: 15em;
   aspect-ratio: 930/360;
   width: 100%;
   background-repeat: no-repeat;
@@ -184,37 +201,40 @@ button:hover {
   height: 100vh;
 }
 
-footer {
-  height: 30vh;
-  background-color: var(--colorJet);
-  color: var(--colorWhite);
-  font-family: "Poppins", sans-serif;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-footer > p {
-  padding: 2vw;
-}
-
-.imageSocial {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: inline;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid white;
-  margin: 0.5em 0 -0.5em;
-  padding: 0;
+.footer-basic {
   width: 100%;
+  padding:40px 0;
+  background-color:#282D32;
+  color:whitesmoke;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
 }

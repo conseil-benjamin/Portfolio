@@ -1,0 +1,20 @@
+Section compétences : 
+  - Lister mes différentes compétences avec une barre de progression et un pourcentage pour chacune des compétences.
+  Pourquoi pas les regrouper par catégorie, et donc faire un truc en js permettant d'afficher uniquement les compétences d'une catégorie en question.
+
+Projets retenus : 
+
+ - Gestion Hôtel JavaFX
+ - Puissance 4 C
+ - QuizzGame Android Java
+ - Tour Hamiltonien en python
+ - Projets Web ??
+
+
+Quoi dire pour chaque projets :
+
+ -Gestion Hôtel : 
+    - Développer en JavaFX sous Eclipse
+    - Captures d'écrans 
+    - Donner lien du code source
+    - Dire quel partie du projet j'ai dévelopé
