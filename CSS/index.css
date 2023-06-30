@@ -11,10 +11,17 @@
   --colorGray: #716969;
   --colorBlackNight: #0f0f0f;
   --colorQuartz: #bcabae;
+  --colorSelection: #ffd363;
 }
 
-::selection{
-  background-color: red;
+::selection {
+  background-color: var(--colorSelection);
+  color: black;
+}
+
+::-moz-selection {
+  background-color: var(--colorSelection);
+  color: black;
 }
 
 body > nav {
@@ -55,6 +62,10 @@ body > nav > ul > li a:hover::after {
   background: var(--colorWhite);
 }
 
+body > nav > ul > li > a:hover {
+  color: gold;
+}
+
 .FirstPage {
   background-color: var(--colorQuartz);
   /* background-repeat: no-repeat;
@@ -72,16 +83,13 @@ body > nav > ul > li a:hover::after {
   padding-top: 6.5em;
 }
 
-.benjaminImg{
+.benjaminImg {
   padding-bottom: 3em;
   border-radius: 50%;
 }
 
-.FirstPage > h1{
+.FirstPage > h1 {
   font-size: clamp(15px, 4vw, 22px);
-  background-color: #ffffff05;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(25px);
   overflow: hidden;
   position: relative;
   color: var(--colorBlackNight);
@@ -136,7 +144,7 @@ h2::before {
     content: "logiciel";
     width: 7ch;
   }
-  85%{
+  85% {
     width: 0ch;
   }
 }
@@ -147,14 +155,13 @@ h2::before {
   }
 }
 
-
 button {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--colorQuartz);
   border-radius: 50px;
-  color: #eeeeee;
+  color: black;
   text-align: center;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -163,7 +170,9 @@ button {
   cursor: pointer;
   margin: 5px;
   padding: 0.5em;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 button:hover {
@@ -182,59 +191,111 @@ button:hover {
 }
 
 .SecondPage {
-  background-color: blueviolet;
-  height: 100vh;
+  background-image: url("/image/imgPaysage.jpg");
+  background-size: cover;
+  height: 100svh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blurry-div {
+  width: 1100px;
+  height: 700px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  border-bottom: 100px;
+  padding: 6em 3em 3em 3em;
 }
 
 .ThirdPage {
-  background-color: aqua;
-  height: 100vh;
+  background-color: var(--colorBlackNight);
+  color: var(--colorBlackNight);
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ThirdPage > h1 {
+  padding-bottom: 5em;
+}
+
+.selectElement {
+  border-radius: 15px;
+  background-color: var(--colorJet);
+  margin-bottom: 50px;
+  color: var(--colorWhite);
+}
+
+.skill-bar {
+  text-align: left;
+  width: 300px;
+  height: 30px;
+  background-color: #f2f2f2;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background-color: var(--colorQuartz);
+  border-radius: 15px;
+  padding-left: 15px;
 }
 
 .FourPage {
   background-color: yellow;
-  height: 100vh;
+  height: 100svh;
 }
 
 .FivePage {
   background-color: blue;
-  height: 100vh;
+  height: 100svh;
 }
 
 .footer-basic {
   width: 100%;
-  padding:40px 0;
-  background-color:#282D32;
-  color:whitesmoke;
+  padding: 40px 0;
+  background-color: #282d32;
+  color: whitesmoke;
 }
 
 .footer-basic .social {
-  text-align:center;
-  padding-bottom:25px;
+  text-align: center;
+  padding-bottom: 25px;
 }
 
 .footer-basic .social > a {
-  font-size:24px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 8px;
-  color:inherit;
-  opacity:0.75;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
 }
 
 .footer-basic .social > a:hover {
-  opacity:0.9;
+  opacity: 0.9;
 }
 
 .footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
 }

@@ -6,7 +6,10 @@
     <link href="/CSS/index.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
       rel="stylesheet"
@@ -22,7 +25,7 @@
     <nav>
       <ul>
         <li>
-          <a href="/index.html">Accueil</a>
+          <a href="index.html">Accueil</a>
         </li>
         <li>
           <a href="#profil">Profil</a>
@@ -38,34 +41,117 @@
     </nav>
     <section class="FirstPage">
       <h1>Benjamin Conseil - Étudiant en 1ère Année de BUT Informatique</h1>
-      <h2>J'aime faire du développement </h2>
-      <img class="benjaminImg" src="image/benjamin.jpg" alt="photo_de_moi" height="500" width="500">
-      <a href="/Ressources/CV_Benjamin_CONSEIL.pdf" download=""><button>Téléchargez CV</button></a>
+      <h2>J'aime faire du développement</h2>
+      <img
+        class="benjaminImg"
+        src="image/benjamin.jpg"
+        alt="photo_de_moi"
+        height="500"
+        width="500"
+      />
+      <a href="/Ressources/CV_Benjamin_CONSEIL.pdf" download=""
+        ><button>Téléchargez CV</button></a
+      >
     </section>
 
     <div class="wave1"></div>
 
     <section class="SecondPage" id="profil">
-      <p>PARLER DE MOI, CE QUE JE SUIS ET FAIT ACTUELLEMENT, CE QUE J'AIME EN GÉNÉRAL ETC...</p>
+      <div class="blurry-div">
+        <p>
+          Je me présente, Benjamin Conseil, 19 ans actuellement étudiant en 1
+          ère année de BUT Informatique à l'IUT de Lannion. <br />
+          <br />J'ai pour ambition d'effectuer ma 2 ème année de BUT en
+          alternance en développement logiciel ou web. J'ai pour objectif
+          d'obtenir mon BUT 3 Informatique et par la suite, partir en Master
+          Informatique pour me spécialiser encore plus dans un domaine précis du
+          développement. <br />
+          <br />
+          Mes Hobbies dans la vie sont : le sport, le cinéma et ainsi que les
+          jeux-vidéos. <br />
+          <br />Je vais vous présenter au sein de mon portfolio, mes compétences
+          ainsi que les différents projets que j'ai eu l'occasion de mener et de
+          réaliser.
+        </p>
+      </div>
     </section>
 
-    <section class="ThirdPage" id="projets"></section>
+    <section class="ThirdPage" id="competences">
+      <h1>Compétences : Languages et logiciels</h1>
+      <select
+        class="selectElement"
+        id="category-select"
+        onchange="filterSkills()"
+      >
+        <option value="web">Web</option>
+        <option value="algorithmie">Algorithmie</option>
+        <option value="bdd">Base de données</option>
+        <option value="logiciel">Logiciels</option>
+      </select>
 
-    <section class="FourPage"></section>
+      <div id="skills-container">
+        <div class="skill-bar" data-category="web">
+          <div class="skill-bar-fill" style="width: 80%">HTML</div>
+        </div>
+        <div class="skill-bar" data-category="web">
+          <div class="skill-bar-fill" style="width: 80%">CSS</div>
+        </div>
+        <div class="skill-bar" data-category="web">
+          <div class="skill-bar-fill" style="width: 80%">JavaScript</div>
+        </div>
+        <div class="skill-bar" data-category="algorithmie">
+          <div class="skill-bar-fill" style="width: 60%">Java</div>
+        </div>
+        <div class="skill-bar" data-category="algorithmie">
+          <div class="skill-bar-fill" style="width: 60%">C</div>
+        </div>
+        <div class="skill-bar" data-category="bdd">
+          <div class="skill-bar-fill" style="width: 90%">SQL</div>
+        </div>
+        <div class="skill-bar" data-category="logiciel">
+          <div class="skill-bar-fill" style="width: 90%">
+            Visual Studio Code
+          </div>
+        </div>
+        <div class="skill-bar" data-category="logiciel">
+          <div class="skill-bar-fill" style="width: 90%">Jetbrain</div>
+        </div>
+      </div>
+    </section>
 
-    <section class="FivePage"></section>
+    <section class="FourPage" id="projets">
+      <p>Gestion Hôtel JavaFX</p>
+    </section>
+
+    <section class="FivePage">
+      <p>Puissance 4 C</p>
+    </section>
+
+    <section class="SixPage">
+      <p>QuizzGame Android Java</p>
+    </section>
+
+    <section class="SixPage">
+      <p>Tour Hamiltonien en python</p>
+    </section>
 
     <footer>
       <div class="footer-basic">
         <footer>
-            <div class="social">
-              <a href="https://github.com/conseil-benjamin"><i class="icon ion-social-github"></i></a>
-              <a href="PHP/contact.php"><i class="icon ion-android-drafts"></i></a>
-              <a href="https://www.linkedin.com/in/benjamin-conseil/"><i class="icon ion-social-linkedin"></i></a>
-            </div>
-            <p class="copyright">Contact - Conseil Benjamin</p>
+          <div class="social">
+            <a href="https://github.com/conseil-benjamin"
+              ><i class="icon ion-social-github"></i
+            ></a>
+            <a href="PHP/contact.php"
+              ><i class="icon ion-android-drafts"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/benjamin-conseil/"
+              ><i class="icon ion-social-linkedin"></i
+            ></a>
+          </div>
+          <p class="copyright">Contact - Conseil Benjamin</p>
         </footer>
-    </div>
+      </div>
     </footer>
   </body>
 </html>
