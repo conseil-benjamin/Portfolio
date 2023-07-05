@@ -1,9 +1,7 @@
 * {
   font-family: "Poppins", sans-serif;
   list-style: none;
-  text-decoration: none;
   scroll-behavior: smooth;
-  color: white;
   padding: 0;
   margin: 0;
   --colorWhite: #ffffff;
@@ -34,7 +32,7 @@ body > nav {
   height: 7vh;
   align-items: center;
   font-size: clamp(15px, 4vw, 22px);
-  z-index: 1;
+  z-index: 5;
 }
 
 body > nav > ul {
@@ -45,6 +43,11 @@ body > nav > ul {
 body > nav > ul > li {
   color: var(--colorBlackNight);
   padding-right: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 body > nav > ul > li a::after {
@@ -93,7 +96,7 @@ body > nav > ul > li > a:hover {
   overflow: hidden;
   position: relative;
   color: var(--colorBlackNight);
-  padding-bottom: 1em;
+  padding: 2em 0 1.5em 0;
 }
 
 .FirstPage > h2 {
@@ -101,7 +104,7 @@ body > nav > ul > li > a:hover {
   overflow: hidden;
   position: relative;
   color: var(--colorBlackNight);
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }
 
 h2::after {
@@ -168,7 +171,7 @@ button {
   -o-transition: all 0.5s;
   transition: all 0.8s;
   cursor: pointer;
-  margin: 5px;
+  margin-bottom: 1.5em;
   padding: 0.5em;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -210,6 +213,7 @@ button:hover {
   font-size: 1.5em;
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 100px;
   border-bottom: 100px;
   padding: 6em 3em 3em 3em;
@@ -226,7 +230,7 @@ button:hover {
 }
 
 .ThirdPage > h1 {
-  padding-bottom: 5em;
+  padding: 0 0 5em 0;
 }
 
 .selectElement {
@@ -253,8 +257,42 @@ button:hover {
 }
 
 .FourPage {
-  background-color: yellow;
+  background-color: var(--colorJet);
   height: 100svh;
+  padding: 3em 0 0 0;
+}
+
+.splide {
+  max-width: 60vw;
+  height: 75vh;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  border: 3px solid black;
+}
+
+.splide .hero-heading-main {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  color: #222;
+  background-color: var(--colorWhite);
+  width: 290px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 13px -4px rgba(0, 0, 0, 0.3);
+}
+
+.splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splide__track{
+  padding: 1em 0 0 0;
 }
 
 .FivePage {

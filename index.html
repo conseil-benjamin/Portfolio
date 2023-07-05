@@ -18,7 +18,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/themes/splide-skyblue.min.css"
+    />
     <script src="/JS/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <title>Portfolio - Conseil Benjamin</title>
   </head>
   <body>
@@ -87,26 +92,33 @@
         <option value="algorithmie">Algorithmie</option>
         <option value="bdd">Base de données</option>
         <option value="logiciel">Logiciels</option>
+        <option value="outils">Outils</option>
       </select>
 
       <div id="skills-container">
         <div class="skill-bar" data-category="web">
-          <div class="skill-bar-fill" style="width: 80%">HTML</div>
+          <div class="skill-bar-fill" style="width: 85%">HTML</div>
         </div>
         <div class="skill-bar" data-category="web">
-          <div class="skill-bar-fill" style="width: 80%">CSS</div>
+          <div class="skill-bar-fill" style="width: 70%">CSS</div>
         </div>
         <div class="skill-bar" data-category="web">
-          <div class="skill-bar-fill" style="width: 80%">JavaScript</div>
+          <div class="skill-bar-fill" style="width: 55%">JavaScript</div>
+        </div>
+        <div class="skill-bar" data-category="web">
+          <div class="skill-bar-fill" style="width: 50%">PHP</div>
         </div>
         <div class="skill-bar" data-category="algorithmie">
-          <div class="skill-bar-fill" style="width: 60%">Java</div>
+          <div class="skill-bar-fill" style="width: 55%">Java</div>
         </div>
         <div class="skill-bar" data-category="algorithmie">
-          <div class="skill-bar-fill" style="width: 60%">C</div>
+          <div class="skill-bar-fill" style="width: 40%">C</div>
+        </div>
+        <div class="skill-bar" data-category="algorithmie">
+          <div class="skill-bar-fill" style="width: 40%">Python</div>
         </div>
         <div class="skill-bar" data-category="bdd">
-          <div class="skill-bar-fill" style="width: 90%">SQL</div>
+          <div class="skill-bar-fill" style="width: 65%">SQL</div>
         </div>
         <div class="skill-bar" data-category="logiciel">
           <div class="skill-bar-fill" style="width: 90%">
@@ -114,13 +126,38 @@
           </div>
         </div>
         <div class="skill-bar" data-category="logiciel">
-          <div class="skill-bar-fill" style="width: 90%">Jetbrain</div>
+          <div class="skill-bar-fill" style="width: 70%">Jetbrain</div>
+        </div>
+        <div class="skill-bar" data-category="outils">
+          <div class="skill-bar-fill" style="width: 75%">Git</div>
         </div>
       </div>
     </section>
 
     <section class="FourPage" id="projets">
-      <p>Gestion Hôtel JavaFX</p>
+      <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="hero-heading-main">
+          <h1>Logiciel Gestion Hôtel</h1>
+        </div>
+
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="/image/chv.png" alt="Image application" />
+            </li>
+            <li class="splide__slide">
+              <img src="/image/affClient.png" alt="fenetre client" />
+            </li>
+            <li class="splide__slide">
+              <img src="/image/courrier.png" alt="courrier" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <a href="https://github.com/conseil-benjamin/Logiciel-Gestion-Hotel"
+        ><button>Voir code Source</button></a
+      >
+      <p>Langage utilisé : Java, JavaFX</p>
     </section>
 
     <section class="FivePage">
@@ -153,5 +190,12 @@
         </footer>
       </div>
     </footer>
+    <script>
+      var splide = new Splide(".splide", {
+        type: "fade",
+        rewind: true,
+      });
+      splide.mount();
+    </script>
   </body>
 </html>
