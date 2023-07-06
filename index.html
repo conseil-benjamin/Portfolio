@@ -46,7 +46,7 @@
     </nav>
     <section class="FirstPage">
       <h1>Benjamin Conseil - Étudiant en 1ère Année de BUT Informatique</h1>
-      <h2>J'aime faire du développement</h2>
+      <h2>J'aime faire du développement&nbsp</h2>
       <img
         class="benjaminImg"
         src="image/benjamin.jpg"
@@ -88,7 +88,7 @@
         id="category-select"
         onchange="filterSkills()"
       >
-        <option id="web" value="web">Web</option>
+        <option id="web" value="web" selected>Web</option>
         <option value="algorithmie">Algorithmie</option>
         <option value="bdd">Base de données</option>
         <option value="logiciel">Logiciels</option>
@@ -161,11 +161,35 @@
     </section>
 
     <section class="FivePage">
-      <p>Puissance 4 C</p>
+      <p></p>
+      <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+
+        <div class="hero-heading-main">
+          <h1>QuizzGame</h1>
+        </div>
+
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="image/courrier (1).png" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="image/affClient.png" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="image/res.png" alt="" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <a href="https://github.com/conseil-benjamin/QuizzGame"
+        ><button>Voir code Source</button></a
+      >
+      <p>Langage utilisé : Java - Android</p>
     </section>
 
     <section class="SixPage">
-      <p>QuizzGame Android Java</p>
+      <p>Puissancee 4</p>
     </section>
 
     <section class="SixPage">
@@ -191,11 +215,14 @@
       </div>
     </footer>
     <script>
-      var splide = new Splide(".splide", {
+      new Splide(".splide", {
         type: "fade",
         rewind: true,
-      });
-      splide.mount();
+      }).mount();
+
+      new Splide("#image-carousel", {
+        heightRatio: 0.5,
+      }).mount();
     </script>
   </body>
 </html>
