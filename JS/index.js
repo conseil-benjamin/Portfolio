@@ -1,25 +1,34 @@
-// permet de retourner en arrière dans l'historique, donc à la page d'avant
-document.getElementById("go-back").addEventListener("click", () => {
-  history.back();
-});
-
 function filterSkills() {
-  var categorySelect = document.getElementById("category-select");
-  var selectedCategory = categorySelect.value;
-  var skillBars = document.getElementsByClassName("skill-bar");
+  let categorySelect = document.getElementById("category-select");
+  let selectedCategory = categorySelect.value;
+  let skillBars = document.querySelectorAll(".skill-bar");
 
   for (var i = 0; i < skillBars.length; i++) {
-    var skillBar = skillBars[i];
-    var category = skillBar.getAttribute("data-category");
+    let skillBar = skillBars[i];
+    let category = skillBar.getAttribute("data-category");
 
-    if (category === selectedCategory) {
-      skillBar.style.display = "block"; // Afficher la compétence
+    if (selectedCategory === "web") {
+      if (category === "web") {
+        skillBar.style.display = "block"; // Afficher la compétence Web
+      } else {
+        skillBar.style.display = "none"; // Masquer les autres compétences
+      }
     } else {
-      skillBar.style.display = "none"; // Masquer la compétence
+      if (category === selectedCategory) {
+        skillBar.style.display = "block"; // Afficher la compétence correspondante
+      } else {
+        skillBar.style.display = "none"; // Masquer les autres compétences
+      }
     }
   }
 }
 
-// Filtrer les compétences au chargement de la page
-window.onload = filterSkills();
+// Au chargement de la page, masquer les compétences non liées au web
+window.addEventListener("DOMContentLoaded", function () {
+  filterSkills();
+});
 
+// permet de retourner en arrière dans l'historique, donc à la page d'avant
+document.getElementById("go-back").addEventListener("click", () => {
+  window.location.href = "index.html";
+});

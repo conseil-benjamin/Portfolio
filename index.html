@@ -88,7 +88,7 @@
         id="category-select"
         onchange="filterSkills()"
       >
-        <option id="web" value="web" selected>Web</option>
+        <option value="web" selected>Web</option>
         <option value="algorithmie">Algorithmie</option>
         <option value="bdd">Base de données</option>
         <option value="logiciel">Logiciels</option>
@@ -96,16 +96,16 @@
       </select>
 
       <div id="skills-container">
-        <div class="skill-bar" data-category="web">
+        <div class="skill-bar" data-category="web" id="webElement">
           <div class="skill-bar-fill" style="width: 85%">HTML</div>
         </div>
-        <div class="skill-bar" data-category="web">
+        <div class="skill-bar" data-category="web" id="webElement">
           <div class="skill-bar-fill" style="width: 70%">CSS</div>
         </div>
-        <div class="skill-bar" data-category="web">
+        <div class="skill-bar" data-category="web" id="webElement">
           <div class="skill-bar-fill" style="width: 55%">JavaScript</div>
         </div>
-        <div class="skill-bar" data-category="web">
+        <div class="skill-bar" data-category="web" id="webElement">
           <div class="skill-bar-fill" style="width: 50%">PHP</div>
         </div>
         <div class="skill-bar" data-category="algorithmie">
@@ -163,7 +163,6 @@
     <section class="FivePage">
       <p></p>
       <section id="image-carousel" class="splide" aria-label="Beautiful Images">
-
         <div class="hero-heading-main">
           <h1>QuizzGame</h1>
         </div>
@@ -185,7 +184,7 @@
       <a href="https://github.com/conseil-benjamin/QuizzGame"
         ><button>Voir code Source</button></a
       >
-      <p>Langage utilisé : Java - Android</p>
+      <p>Langage utilisé : Java - Android Studio - XML</p>
     </section>
 
     <section class="SixPage">
@@ -221,7 +220,8 @@
       }).mount();
 
       new Splide("#image-carousel", {
-        heightRatio: 0.5,
+        type: "fade",
+        rewind: true,
       }).mount();
     </script>
   </body>
